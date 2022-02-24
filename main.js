@@ -1,5 +1,8 @@
 const breakfastBtn = document.querySelector('.breakfast');
 const lunchBtn = document.querySelector('.lunch');
+const dinnerBtn = document.querySelector('.dinner');
+const dessertBtn = document.querySelector('.dessert');
+const showAllBtn = document.querySelector('.all');
 
 const itemOne = document.querySelector('.item-1');
 const itemTwo = document.querySelector('.item-2');
@@ -12,23 +15,82 @@ const itemEight = document.querySelector('.item-8');
 
 const foodContainer = document.querySelector('.foods');
 
+function showAll (){
+    showAllBtn.addEventListener('click', ()=> {
+        itemOne.style.visibility ="visible";
+        itemTwo.style.visibility ="visible";
+        itemThree.style.visibility ="visible";
+        itemFour.style.visibility ="visible";
+        itemFive.style.visibility ="visible";
+        itemSix.style.visibility ="visible";
+        itemSeven.style.visibility = "visible";
+        itemEight.style.visibility = "visible";
+    })
+}
+showAll();
 
 
 
 function breakfast (){
     breakfastBtn.addEventListener('click', ()=> {
-        itemOne.remove('item-1');
-        itemThree.remove('item-3');
-        itemFour.remove('item-4');
-        itemFive.remove('item-5');
-        itemSeven.remove('item-7');
-        itemEight.remove('item-8');
+        itemTwo.style.visibility ="hidden";
+        itemThree.style.visibility ="hidden";
+        itemFour.style.visibility ="hidden";
+        itemFive.style.visibility ="hidden";
+        itemSeven.style.visibility ="hidden";
+        itemEight.style.visibility ="hidden";
 
-       
-        
-
+        itemOne.style.visibility = "visible";
+        itemSix.style.visibility = "visible";
     })
 }
 breakfast();
 
 
+function lunch (){
+    lunchBtn.addEventListener('click', ()=> {
+        itemOne.style.visibility ="hidden";
+        itemTwo.style.visibility ="hidden";
+        itemFour.style.visibility ="hidden";
+        itemFive.style.visibility ="hidden";
+        itemSix.style.visibility ="hidden";
+        itemSeven.style.visibility ="hidden";
+
+        itemThree.style.visibility = "visible"
+        itemEight.style.visibility = "visible"
+    })
+}
+lunch();
+
+
+function dinner (){
+    dinnerBtn.addEventListener('click', ()=> {
+        itemOne.style.visibility ="hidden";
+        itemTwo.style.visibility ="hidden";
+        itemThree.style.visibility ="hidden";
+        itemSix.style.visibility ="hidden";
+        itemSeven.style.visibility ="hidden";
+        itemEight.style.visibility ="hidden";
+
+        itemFour.style.visibility = "visible"
+        itemFive.style.visibility = "visible"
+    })
+}
+dinner();
+
+
+
+function dessert (){
+    dessertBtn.addEventListener('click', ()=> {
+        itemOne.style.visibility ="hidden";
+        itemThree.style.visibility ="hidden";
+        itemFour.style.visibility ="hidden";
+        itemFive.style.visibility ="hidden";
+        itemSix.style.visibility ="hidden";
+        itemEight.style.visibility ="hidden";
+
+        itemSeven.style.visibility = "visible"
+        itemTwo.style.visibility = "visible"
+    })
+}
+dessert();
