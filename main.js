@@ -1,4 +1,5 @@
 const breakfastBtn = document.querySelector('.breakfast');
+const lunchBtn = document.querySelector('.lunch');
 
 const itemOne = document.querySelector('.item-1');
 const itemTwo = document.querySelector('.item-2');
@@ -9,16 +10,25 @@ const itemSix = document.querySelector('.item-6');
 const itemSeven = document.querySelector('.item-7');
 const itemEight = document.querySelector('.item-8');
 
+const foodContainer = document.querySelector('.foods');
+
+
 
 
 function breakfast (){
     breakfastBtn.addEventListener('click', ()=> {
-        itemTwo.remove('item-2');
+        itemOne.remove('item-1');
         itemThree.remove('item-3');
         itemFour.remove('item-4');
         itemFive.remove('item-5');
-        itemSix.remove('item-6');
         itemSeven.remove('item-7');
+        itemEight.remove('item-8');
+
+       
+        
+
     })
 }
 breakfast();
+
+
